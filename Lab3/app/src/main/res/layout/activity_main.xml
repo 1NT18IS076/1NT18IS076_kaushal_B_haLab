@@ -36,7 +36,8 @@
                 android:layout_weight="1"
                 android:backgroundTint="#81a1c1"
                 android:text="AC"
-                ></Button>
+                android:onClick="clearEvent"
+                />
 
             <Button
                 android:id="@+id/btnFlipSign"
@@ -44,7 +45,8 @@
                 android:layout_marginRight="1pt"
                 android:layout_weight="1"
                 android:backgroundTint="#81a1c1"
-                android:text="+/-"></Button>
+                android:onClick="flipSignEvent"
+                android:text="+/-"/>
 
             <Button
                 android:id="@+id/BtnPercent"
@@ -52,7 +54,8 @@
                 android:layout_marginRight="1pt"
                 android:layout_weight="1"
                 android:backgroundTint="#81a1c1"
-                android:text="%"></Button>
+                android:onClick="percentEvent"
+                android:text="%"/>
 
             <Button
                 android:id="@+id/btnMul"
@@ -60,7 +63,8 @@
                 android:layout_marginRight="1pt"
                 android:layout_weight="1"
                 android:backgroundTint="#5e81ac"
-                android:text="*"></Button>
+                android:text="*"
+                android:onClick="operatorEvent"/>
 
         </TableRow>
 
@@ -76,7 +80,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#81a1c1"
                 android:onClick="numberEvent"
-                android:text="7"></Button>
+                android:text="7"/>
 
             <Button
                 android:id="@+id/btn8"
@@ -85,7 +89,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#81a1c1"
                 android:onClick="numberEvent"
-                android:text="6"></Button>
+                android:text="6"/>
 
             <Button
                 android:id="@+id/btn9"
@@ -94,7 +98,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#81a1c1"
                 android:onClick="numberEvent"
-                android:text="5"></Button>
+                android:text="5"/>
 
             <Button
                 android:id="@+id/btnDiv"
@@ -102,7 +106,8 @@
                 android:layout_marginRight="1pt"
                 android:layout_weight="1"
                 android:backgroundTint="#5e81ac"
-                android:text="/"></Button>
+                android:text="/"
+                android:onClick="operatorEvent"/>
 
         </TableRow>
 
@@ -118,7 +123,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#81a1c1"
                 android:onClick="numberEvent"
-                android:text="4"></Button>
+                android:text="4"/>
 
             <Button
                 android:id="@+id/btn5"
@@ -127,7 +132,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#81a1c1"
                 android:onClick="numberEvent"
-                android:text="5"></Button>
+                android:text="5"/>
 
             <Button
                 android:id="@+id/btn6"
@@ -136,7 +141,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#81a1c1"
                 android:onClick="numberEvent"
-                android:text="6"></Button>
+                android:text="6"/>
 
             <Button
                 android:id="@+id/btnAdd"
@@ -144,7 +149,8 @@
                 android:layout_marginRight="1pt"
                 android:layout_weight="1"
                 android:backgroundTint="#5e81ac"
-                android:text="+"></Button>
+                android:text="+"
+                android:onClick="operatorEvent"/>
 
         </TableRow>
 
@@ -160,7 +166,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#81a1c1"
                 android:onClick="numberEvent"
-                android:text="1"></Button>
+                android:text="1"/>
 
             <Button
                 android:id="@+id/btn2"
@@ -169,7 +175,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#81a1c1"
                 android:onClick="numberEvent"
-                android:text="2"></Button>
+                android:text="2"/>
 
             <Button
                 android:id="@+id/btn3"
@@ -178,7 +184,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#81a1c1"
                 android:onClick="numberEvent"
-                android:text="3"></Button>
+                android:text="3"/>
 
             <Button
                 android:id="@+id/btnSub"
@@ -186,7 +192,8 @@
                 android:layout_marginRight="1pt"
                 android:layout_weight="1"
                 android:backgroundTint="#5e81ac"
-                android:text="-"></Button>
+                android:text="-"
+                android:onClick="operatorEvent"/>
 
         </TableRow>
 
@@ -201,7 +208,8 @@
                 android:layout_marginRight="1pt"
                 android:layout_weight="1"
                 android:backgroundTint="#81a1c1"
-                android:text="0"></Button>
+                android:text="0"
+                android:onClick="numberEvent"/>
 
             <Button
                 android:id="@+id/btnPoint"
@@ -209,7 +217,8 @@
                 android:layout_marginRight="1pt"
                 android:layout_weight="1"
                 android:backgroundTint="#81a1c1"
-                android:text="."></Button>
+                android:text="."
+                android:onClick="numberEvent"/>
 
             <Button
                 android:id="@+id/btnEq"
@@ -217,7 +226,8 @@
                 android:layout_marginRight="1pt"
                 android:layout_weight="1"
                 android:backgroundTint="#5e81ac"
-                android:text="="></Button>
+                android:text="="
+                android:onClick="evalEvent"/>
 
         </TableRow>
     </TableLayout>
