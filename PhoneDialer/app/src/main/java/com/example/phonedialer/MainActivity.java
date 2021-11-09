@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         callBtn = findViewById(R.id.btnCall);
         savebtn = findViewById(R.id.btnSave);
 
+        // runtime check to see ifn call perm is granted. not needed for ACTION_DIAL
         if (checkSelfPermission(Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
             Toast.makeText(getApplicationContext(), "Call permission granted", Toast.LENGTH_SHORT).show();
         } else {
