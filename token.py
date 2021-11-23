@@ -66,7 +66,7 @@ def main():
         print(f"Decrypted string = {plaintext.decode()}\n")
 
     elif choice == 3:
-        enc_token = b'Bz9Q-B-tXhUIdf0dOMl-nAfJF27WLDnoAaw1vN74rgifhYXrsgT5uJXBLld9C38c'
+        enc_token = b'4q0C0cYo6Fex8Dti_by45H4HiCnyovIvAkYfQfnsVmIDvjeMWoDiZOC3zURJaaIr'
 
         token = aes_ecb_decrypt(enc_token, key)
 
