@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
                 mediaPlayer.start();
 
-                seekbar.setProgress((int)startTime);
+//                seekbar.setProgress((int)startTime);
             }
         });
 
