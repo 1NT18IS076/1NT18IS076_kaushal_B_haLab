@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button rewindBtn = findViewById(R.id.rewind);
         Button skipBtn = findViewById(R.id.skip);
+        Button resetBtn = findViewById(R.id.reset);
 
         seekbar = (SeekBar)findViewById(R.id.seekBar2);
 //        seekbar.setClickable(false);
@@ -69,6 +70,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Pausing Song",Toast.LENGTH_LONG).show();
                 mediaPlayer.pause();
+            }
+        });
+
+        resetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mediaPlayer.seekTo((int) 0);
             }
         });
 
