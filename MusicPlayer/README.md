@@ -1,3 +1,3 @@
 # Media Player
 
-!(screenshot)[Screenshot.png]
+![screenshot](Screenshot.png)
