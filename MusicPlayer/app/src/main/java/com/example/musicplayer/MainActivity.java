@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 double curTime = mediaPlayer.getCurrentPosition();
 
-                if (curTime - 5 < 0) {
+                if (curTime - 5000 < 0) {
                     Toast.makeText(getApplicationContext(), "Cannot rewind further", Toast.LENGTH_SHORT).show();
                 } else {
                     mediaPlayer.seekTo((int) curTime - 5000);
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 double curTime = mediaPlayer.getCurrentPosition();
                 double dur = mediaPlayer.getDuration();
 
-                if (curTime + 5 > dur) {
+                if (curTime + 5000 > dur) {
                     Toast.makeText(getApplicationContext(), "Cannot skip further", Toast.LENGTH_SHORT).show();
                 } else {
                     mediaPlayer.seekTo((int) curTime + 5000);
