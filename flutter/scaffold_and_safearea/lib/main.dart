@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,59 +12,95 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Scaffold Demo',
+      title: 'Scaffold and safe area',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Scaffold Demo'),
+      home: const WithScaffoldAndSafearea(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+class WithoutSafearea extends StatelessWidget {
+  const WithoutSafearea({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+    return const Text(
+      "Without safe area",
+      textAlign: TextAlign.center,
+      style: TextStyle(
+          fontSize: 40,
+          fontWeight: FontWeight.w800,
+          color: Colors.deepOrangeAccent),
+    );
+  }
+}
+
+class WithSafearea extends StatelessWidget {
+  const WithSafearea({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const SafeArea(
+      child: Text(
+        "With safe area",
+        textAlign: TextAlign.center,
+        style: TextStyle(
+            fontSize: 40,
+            fontWeight: FontWeight.w800,
+            color: Colors.deepOrangeAccent),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+    );
+  }
+}
+
+class WithScaffold extends StatelessWidget {
+  const WithScaffold({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Scaffold and safe area'),
+        backgroundColor: Colors.redAccent,
+      ),
+      backgroundColor: Colors.blueAccent,
+      body: const Center(
+        child: Text(
+          'Hello there',
+          style: TextStyle(
+              fontSize: 40,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+    );
+  }
+}
+
+class WithScaffoldAndSafearea extends StatelessWidget {
+  const WithScaffoldAndSafearea({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Scaffold and safe area'),
+        backgroundColor: Colors.redAccent,
       ),
-    ));
+      backgroundColor: Colors.blueAccent,
+      body: const SafeArea(
+        child: Center(
+          child: Text(
+            'Hello there',
+            style: TextStyle(
+                fontSize: 40,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold),
+          ),
+        ),
+      ),
+    );
   }
 }
